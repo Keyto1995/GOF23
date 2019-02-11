@@ -7,7 +7,7 @@ package top.keyto.gof23.singleton;
  * Created on 2019/2/11
  */
 public class Singleton3 {
-    // volatile 是为了防止指令重排，且在 Java5 之前任存在缺陷，必须在 JDK5 版本以上使用。
+    // volatile 是为了防止指令重排，且在 Java5 之前仍存在缺陷，必须在 JDK5 版本以上使用。
     private volatile static Singleton3 instance;
 
     public static Singleton3 getInstance() {
