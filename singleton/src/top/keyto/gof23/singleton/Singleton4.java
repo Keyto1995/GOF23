@@ -7,12 +7,12 @@ package top.keyto.gof23.singleton;
  * Created on 2019/2/11
  */
 public class Singleton4 {
-    private static class SingletonClassInstance {
-        private static final Singleton4 instance = new Singleton4();
+    private static class SingletonHolder {
+        private static final Singleton4 INSTANCE = new Singleton4();
     }
 
     public static Singleton4 getInstance() {
-        return SingletonClassInstance.instance;
+        return SingletonHolder.INSTANCE;
     }
 
     private Singleton4() {

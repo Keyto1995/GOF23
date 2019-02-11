@@ -7,21 +7,14 @@ package top.keyto.gof23.singleton;
  * Created on 2019/2/11
  */
 public class Singleton3 {
-    private static Singleton3 instance;
+    // volatile 是为了防止指令重排，且在 Java5 之前任存在缺陷，必须在 JDK5 版本以上使用。
+    private volatile static Singleton3 instance;
 
-
-    public static synchronized Singleton3 getInstance() {
+    public static Singleton3 getInstance() {
         if (instance == null) {
-            Singleton3 sc;
             synchronized (Singleton3.class) {
-                sc = instance;
-                if (sc == null) {
-                    synchronized (Singleton3.class) {
-                        if (sc == null) {
-                            sc = new Singleton3();
-                        }
-                    }
-                    instance = sc;
+                if (instance == null) {
+                    instance = new Singleton3();
                 }
             }
         }
