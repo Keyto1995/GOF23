@@ -14,3 +14,11 @@ Group of Four 23种设计模式
 | 双重检测锁 | YES | YES |
 | 静态内部类 | YES | YES |
 | 枚举 | YES | NO |
+
+## 工厂模式 [factory]( ./factory/README.md )
+`工厂模式` 实现了创建者和调用者的分离。
+
+详细分类：
++ 简单工厂模式
++ 工厂方法模式
++ 抽象工厂模式
